@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package ui;
+package engine;
 
 import controllers.WelcomeScreenController;
 import java.io.IOException;
@@ -71,7 +71,7 @@ public class ScreenManager
         return welcomeScreenCr;
     }
     
-    public Scene welcomeScreenSc() {
+    public Scene getWelcomeScreenSc() {
         return welcomeScreenSc;
     }
 }

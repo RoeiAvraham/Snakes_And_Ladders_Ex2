@@ -6,12 +6,8 @@
 package Main;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import engine.ScreenManager;
 
 /**
  *
@@ -19,11 +15,12 @@ import javafx.stage.Stage;
  */
 public class JavaFX_Snakes_And_Ladders_Application extends Application
 {
+    Stage primaryStage;
 
     @Override
     public void start(Stage primaryStage)
     {
-        
+        this.primaryStage = primaryStage;
     }
 
     /**
