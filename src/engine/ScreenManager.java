@@ -48,7 +48,6 @@ public class ScreenManager
 //        LoadCreatePlayers();        
 //        LoadGameScreen();             
           LoadWelcomeScreen();        
-//        LoadBidScreen();
      }
 
      public static ScreenManager GetInstance()
