@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 8, 2014, 11:46:49 AM
+    Author     : Roei
+*/
+
+.root
+{
+    -fx-background-image: url("../images/cloudlandscape.jpg");
+}
+
+.button
+{
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-background-color: linear-gradient(darkorange, orangered);
+    -fx-font-size: 18px;
+
+    
+}
+
+/*.label
+{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-text-fill: #2365b4;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}*/
+
+.button:hover
+{
+    -fx-background-color: linear-gradient(#ffac00, #ff8300);
+}
+
+.button:pressed
+{
+    -fx-background-color: linear-gradient(darkgreen, green);
+}
+
+#snakeOnPlay
+{
+    -fx-opacity: 0;
+}
+
+#snakeOnPlay:pressed
+{
+    -fx-opacity: 100;
+}
+#playBtn
+{
+   -fx-font-weight: bold; 
+   -fx-font-size: 30px;   
+}

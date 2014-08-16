@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<GridPane alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="862.0" styleClass="root" stylesheets="@../css/choosePlayerScreen.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="173.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="602.0" minWidth="10.0" prefWidth="457.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="481.0" minWidth="8.0" prefWidth="173.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="516.0" minHeight="0.0" prefHeight="140.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="607.0" minHeight="10.0" prefHeight="323.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <HBox alignment="CENTER" prefHeight="120.0" prefWidth="802.0" GridPane.columnSpan="3">
+            <children>
+                <StackPane prefHeight="141.0" prefWidth="771.0">
+                    <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="143.0" prefWidth="771.0">
+                            <children>
+                                <ImageView fitHeight="91.0" fitWidth="548.0" mouseTransparent="true" nodeOrientation="INHERIT">
+                                    <image>
+                                        <Image url="@../images/logo.png" />
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="DEFAULT" />
+                                    </cursor>   
+                                </ImageView>
+                            </children>
+                            <StackPane.margin>
+                                <Insets top="60.0" />
+                            </StackPane.margin>
+                        </HBox>
+                        <HBox alignment="BASELINE_LEFT" fillHeight="false" prefHeight="137.0" prefWidth="771.0">
+                            <children>
+                                <ImageView fitHeight="156.0" fitWidth="160.0">
+                                    <image>
+                                        <Image url="@../images/animated-snake.gif" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </children>
+                </StackPane>
+            </children>
+            <GridPane.margin>
+                <Insets left="20.0" />
+            </GridPane.margin>
+        </HBox>
+        <GridPane alignment="CENTER" prefHeight="329.0" prefWidth="482.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="136.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="10.0" prefWidth="155.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="10.0" prefWidth="118.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="10.0" prefWidth="76.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="118.0" minHeight="1.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="171.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="171.0" minHeight="10.0" prefHeight="107.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="136.0" text="Player 1's name:" GridPane.rowIndex="1" />
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="136.0" text="Number of Players:" />
+                <ComboBox fx:id="numOfPlayersCB" prefHeight="27.0" prefWidth="194.0" GridPane.columnIndex="1">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="2 Players" />
+                            <String fx:value="3 Players" />
+                            <String fx:value="4 Players" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="17.0" prefWidth="136.0" text="Player 2's name:" textAlignment="CENTER" GridPane.rowIndex="2" />
+                <Label alignment="CENTER" layoutX="10.0" layoutY="13.0" prefWidth="136.0" text="Player 3's name:" GridPane.rowIndex="3" />
+                <Label alignment="CENTER" layoutX="10.0" layoutY="178.0" prefWidth="136.0" text="Player 4's name:" GridPane.rowIndex="4" />
+                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField layoutX="141.0" layoutY="81.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField layoutX="141.0" layoutY="81.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField layoutX="141.0" layoutY="179.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <ComboBox fx:id="player1CB" prefWidth="150.0" promptText="Player Type" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Human" />
+                            <String fx:value="Computer" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox fx:id="player2CB" layoutX="293.0" layoutY="69.0" prefWidth="150.0" promptText="Player Type" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Human" />
+                            <String fx:value="Computer" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox fx:id="player3CB" layoutX="293.0" layoutY="116.0" prefWidth="150.0" promptText="Player Type" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Human" />
+                            <String fx:value="Computer" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ComboBox fx:id="player4CB" layoutX="293.0" layoutY="116.0" prefWidth="150.0" promptText="Player Type" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Human" />
+                            <String fx:value="Computer" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <ImageView fitHeight="52.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <image>
+                        <Image url="@../images/human1-icon.png" />
+                    </image>
+                </ImageView>
+                <ComboBox fx:id="boardSizeCB" prefWidth="150.0" promptText="Board Size" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="5" />
+                            <String fx:value="6" />
+                            <String fx:value="7" />
+                            <String fx:value="8" />
+                        </FXCollections>
+                    </items>                
+                </ComboBox>
+                <ComboBox fx:id="numSoldiersToWinCB" prefWidth="150.0" promptText="Num soldiers to win" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="1" />
+                            <String fx:value="2" />
+                            <String fx:value="3" />
+                            <String fx:value="4" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>                    
+                <Button id="playBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="90.0" prefWidth="109.0" text="Play!" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="5" GridPane.rowSpan="2">
+                    <StackPane.margin>
+                        <Insets left="10.0" />
+                    </StackPane.margin>
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Button>
+            </children>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </GridPane>
+        <HBox alignment="BOTTOM_RIGHT" maxHeight="200.0" maxWidth="196.0" prefHeight="200.0" prefWidth="196.0" GridPane.rowIndex="1">
+            <children>
+                <Button alignment="BOTTOM_RIGHT" layoutX="107.0" layoutY="177.0" mnemonicParsing="false" text="Main Menu" textAlignment="CENTER" />
+            </children>
+        </HBox>
+    </children>
+</GridPane>

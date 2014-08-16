@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="816.0" styleClass="root" stylesheets="@../css/welcomeScreen.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WelcomeScreenController">
+   <children>
+      <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="147.0">
+               <children>
+                  <ImageView fitHeight="88.0" fitWidth="554.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT" maxHeight="150.0" maxWidth="740.0" prefHeight="150.0" prefWidth="740.0">
+               <children>
+                  <ImageView fitHeight="146.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/animated-snake.gif" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <VBox id="vbox" alignment="CENTER" prefHeight="346.0" prefWidth="816.0">
+         <children>
+            <Button id="newGameBtn" fx:id="newGameButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNewGameButtonAction" prefHeight="31.0" prefWidth="126.0" text="New Game">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="25.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="loadGameButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleLoadGameButtonAction" prefHeight="31.0" prefWidth="126.0" text="Load Game">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="exitButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleExitButtonAction" prefHeight="31.0" prefWidth="126.0" text="Exit">
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>
